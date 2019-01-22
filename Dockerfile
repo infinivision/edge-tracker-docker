@@ -45,7 +45,7 @@ RUN mv opencv/share/OpenCV /usr/share/
 RUN mv opencv/opencv.pc /usr/lib/aarch64-linux-gnu/pkgconfig/
 
 # install edge-tracker
-ENV EDGE_TRACKER_VERSION=0.1.4
+ENV EDGE_TRACKER_VERSION=0.1.5
 COPY edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz /tmp/
 RUN tar xzvf edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz
 RUN mkdir -p /tmp/edge-tracker-${EDGE_TRACKER_VERSION}/build
