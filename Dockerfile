@@ -11,6 +11,7 @@ WORKDIR /tmp
 COPY eigen-3.3.4.tar.gz /tmp/
 RUN tar xzvf eigen-3.3.4.tar.gz
 RUN mv Eigen /usr/include/aarch64-linux-gnu/
+COPY eigen3.pc /usr/local/lib/pkgconfig/
 
 # install cpptoml
 COPY cpptoml.h /usr/include/aarch64-linux-gnu/
@@ -45,7 +46,7 @@ RUN mv opencv/share/OpenCV /usr/share/
 RUN mv opencv/opencv.pc /usr/lib/aarch64-linux-gnu/pkgconfig/
 
 # install edge-tracker
-ENV EDGE_TRACKER_VERSION=0.1.5
+ENV EDGE_TRACKER_VERSION=0.1.6
 COPY edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz /tmp/
 RUN tar xzvf edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz
 RUN mkdir -p /tmp/edge-tracker-${EDGE_TRACKER_VERSION}/build
