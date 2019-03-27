@@ -1,8 +1,0 @@
-prefix=/usr/include/aarch64-linux-gnu/
-
-Name: Eigen3
-Description: A C++ template library for linear algebra: vectors, matrices, and related algorithms
-Requires:
-Version: 3.3.4
-Libs:
-Cflags: -I${prefix}
