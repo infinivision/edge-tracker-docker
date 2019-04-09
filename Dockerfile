@@ -1,4 +1,4 @@
-FROM edge-opencv-arm64:0.1.6
+FROM edge-tracker-base-arm64:0.1.6
 
 WORKDIR /tmp
 
