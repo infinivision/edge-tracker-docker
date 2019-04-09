@@ -8,7 +8,7 @@ COPY edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz /tmp/
 RUN tar xzvf edge-tracker-${EDGE_TRACKER_VERSION}.tar.gz
 RUN mkdir -p /tmp/edge-tracker-${EDGE_TRACKER_VERSION}/build
 WORKDIR /tmp/edge-tracker-${EDGE_TRACKER_VERSION}/build
-RUN cmake -DBUILD_SHARED_LIBS=OFF ..
+RUN cmake ..
 RUN make
 WORKDIR /tmp/edge-tracker-${EDGE_TRACKER_VERSION}
 RUN bin/export 32 64 70 80 90 100
